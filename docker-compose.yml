@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:17.2
+    container_name: anonboard_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: localuser
+      POSTGRES_PASSWORD: localpassword 
+      POSTGRES_DB: localdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+    driver: local
+

@@ -1,0 +1,6 @@
+env: "local" # local, prod
+postgres_dsn: "postgres://localuser:localpassword@0.0.0.0:5432/localdb"
+http_server:
+  address: "localhost:8080"
+  timeout: 4s
+  idle_timeout: 60s
